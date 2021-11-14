@@ -1,0 +1,35 @@
+def add(x, y):
+    return x + y
+
+def subtract(x, y):
+    return x - y
+
+def multiply(x, y):
+    return x * y
+
+def divide(x, y):
+    return x / y
+
+print('Válassz egy műveletet:')
+print('\t1. Összeadás')
+print('\t2. Kivonás')
+print('\t3. Szorzás')
+print('\t4. Osztás')
+
+while True:
+    choice = input('Válassz egyet(1/2/3/4): ')
+
+    if choice in ('1', '2', '3', '4'):
+        num1 = float(input('Üsd be az első számot: '))
+        num2 = float(input('Üsd be a második számot: '))
+        if choice == '1':
+            print('\t', num1, '+', num2, '=', add(num1, num2))
+        elif choice == '2':
+            print('\t', num1, '-', num2, '=', subtract(num1, num2))
+        elif choice == '3':
+            print('\t', num1, '*', num2, '=', multiply(num1, num2))
+        elif choice == '4':
+            print('\t', num1, '/', num2, '=', divide(num1, num2))
+        break
+    else:
+        print('Rossz válasz.')
